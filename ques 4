@@ -1,0 +1,47 @@
+Code Structure and Functionality
+
+1. int getMatrixEdgeLength(int *matrix, int n, int i, int j)
+- Purpose: Returns the edge length between vertices `i` and `j` from an adjacency matrix.
+    - Parameters:
+    - `matrix`: Pointer to the adjacency matrix.
+    - `n`: Number of vertices.
+    - `i`: Starting vertex index.
+    - `j`: Ending vertex index.
+    - Returns: Edge length between vertices `i` and `j`.
+
+    2. int getLinkedListLength(listnode* start, int n, int *dist)
+    - Purpose: Calculates the total length of the path represented by a linked list of vertices.
+    - Parameters:
+    - `start`: Pointer to the start of the linked list.
+    - `n`: Number of vertices (not used in the function).
+    - `dist`: Pointer to the adjacency matrix.
+    - Returns: Total length of the path from the start vertex to the end vertex in the linked list.
+
+    3. struct listnode *copyListAndAddNode(listnode *inputList, int vertexNumToAdd)
+    - Purpose: Creates a copy of a linked list and adds a new node with the value `vertexNumToAdd` at the end.
+    - Parameters:
+    - `inputList`: Pointer to the original linked list.
+    - `vertexNumToAdd`: Value of the new node to be added.
+    - Returns: Pointer to the new linked list with the additional node.
+
+    4. struct listnode *shortest_path(int n, int s, int t, int *dist)
+    - Purpose: Finds the shortest path from vertex `s` to vertex `t` using a modified Dijkstra's algorithm.
+    - Parameters:
+    - `n`: Number of vertices.
+    - `s`: Start vertex index.
+    - `t`: Target vertex index.
+    - `dist`: Pointer to the adjacency matrix.
+    - Returns: Pointer to a linked list representing the shortest path from vertex `s` to vertex `t`.
+
+    5. int main(void)
+    - Purpose: Initializes a distance matrix for a graph with 1000 vertices, runs the `shortest_path` function to find the shortest path from vertex 0 to vertex 999, and prints the result.
+    - Details:
+    - Constructs a distance matrix with various edge lengths.
+    - Calls `shortest_path` to get the shortest path and prints the path.
+
+    Key Points
+    - The code uses a linked list to represent paths and a distance matrix to store edge weights.
+    - The `shortest_path` function employs a variant of Dijkstra's algorithm, but with a non-standard implementation for path copying and distance updates.
+    - The `main` function tests the algorithm with a specific graph and prints the path.
+
+    This documentation provides an overview of how each function operates within the code.
